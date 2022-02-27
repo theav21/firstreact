@@ -7,6 +7,8 @@ export default function (props) {
         <div className="mb-3">
             <textarea className="form-control" id="exampleFormControlTextarea1" rows="15"></textarea>
         </div>
+        <button type='button' className="btn btn-primary m-3">Convert to Uppercase</button>
+        {/* <button type='button' className="btn btn-primary m-3">Convert to Uppercase</button> */}
     </div>
   )
 }
