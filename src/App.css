@@ -37,6 +37,10 @@
   }
 }
 .wrapper{
-  width: 80%;
-  margin: auto;
+  width: 15%;
+  margin-left: 0px;
+}
+.wrapper1{
+  width: 50%;
+  margin-right: 0px;
 }
