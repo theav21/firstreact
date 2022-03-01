@@ -5,16 +5,19 @@ function TextForm (props) {
           // console.log("button has been clicked");
           let newText=text.toUpperCase();
           setText(newText)
+          props.showAlert("converted to uppercase","success")
       }
       const clickHandler2 = () => {
         // console.log("button has been clicked");
         let newText2=text.toLowerCase();
         setText(newText2)
+        props.showAlert("converted to lowercase","success")
       }
 
       const click=() => {
-        let newtext=" ";
+        let newtext="";
         setText(newtext)
+        props.showAlert("cleared","success")
       }
 
 
@@ -45,7 +48,20 @@ function TextForm (props) {
           <h1>Words and Characters Count</h1>
           <p>{text.split(" ").length} words and {text.length} Characters</p>
           <p><b>Time to read below para :-</b>{0.008 * text.split(" ").length} minutes or {0.48 * text.split(" ").length} seconds </p>
-          <div className={`wrapper1 accordion-item bg-${props.mode}`}>
+
+
+        </div>
+        <div className='container my-3' style={{color:props.label}}>
+            <h1>Enter the Text to Analyze</h1>
+            <div className="mb-3">
+                <textarea className={`form-control bg-${props.mode}`} value={text} style={{color:props.label}}  onChange={changeHandler} id="exampleFormControlTextarea1" rows="10" placeholder='enter text area'></textarea>
+            </div>
+            <button type='button' onClick={clickHandler} className={`btn btn-${props.mode} m-2`}>Convert to Uppercase</button>
+            <button type='button' onClick={clickHandler2}  className={`btn btn-${props.mode} m-2`}>Convert to lowercase</button>
+            <button type='button' onClick={click}  className="btn btn-light m-2">Clear</button>
+            {/* <h2>Preview</h2>
+            <p>{text}</p> */}
+            <div className={`wrapper1 accordion-item bg-${props.mode}`}>
                 <h2 className="accordion-header" style={{color:props.label}} id="headingOne">
                   <button className={`accordion-button bg-${props.mode}`} style={{color:props.label}} type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <b>Find And Replace Word</b>
@@ -61,18 +77,6 @@ function TextForm (props) {
                   </div>
                 </div>
             </div>
-
-        </div>
-        <div className='container my-3' style={{color:props.label}}>
-            <h1>Enter the Text to Analyze</h1>
-            <div className="mb-3">
-                <textarea className={`form-control bg-${props.mode}`} value={text} style={{color:props.label}}  onChange={changeHandler} id="exampleFormControlTextarea1" rows="10" placeholder='enter text area'></textarea>
-            </div>
-            <button type='button' onClick={clickHandler} className={`btn btn-${props.mode} m-2`}>Convert to Uppercase</button>
-            <button type='button' onClick={clickHandler2}  className={`btn btn-${props.mode} m-2`}>Convert to lowercase</button>
-            <button type='button' onClick={click}  className="btn btn-light m-2">Clear</button>
-            <h2>Preview</h2>
-            <p>{text}</p>
             
             
         </div>
