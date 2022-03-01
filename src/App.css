@@ -44,3 +44,6 @@
   width: 50%;
   margin-right: 0px;
 }
+.button :hover {
+  background-color: red;
+}
