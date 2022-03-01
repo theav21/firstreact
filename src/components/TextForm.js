@@ -68,14 +68,14 @@ function TextForm(props) {
         <button
           type="button"
           onClick={clickHandler}
-          className={`btn btn-${props.mode} m-2`}
+          className={`btn btn-${props.color} m-2`}
         >
           Convert to Uppercase
         </button>
         <button
           type="button"
           onClick={clickHandler2}
-          className={`btn btn-${props.mode} m-2`}
+          className={`btn btn-${props.color} m-2`}
         >
           Convert to lowercase
         </button>
@@ -84,36 +84,13 @@ function TextForm(props) {
         </button>
         {/* <h2>Preview</h2>
             <p>{text}</p> */}
-        <div className={`wrapper1 accordion-item bg-${props.mode}`}>
-          <h2
-            className="accordion-header"
-            style={{ color: props.label }}
-            id="headingOne"
-          >
-            <button
-              className={`accordion-button bg-${props.mode}`}
-              style={{ color: props.label }}
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
-              <b>Find And Replace Word</b>
-            </button>
-          </h2>
-          <div
-            id="collapseOne"
-            className="accordion-collapse collapse show"
-            style={{ color: props.label }}
-            aria-labelledby="headingOne"
-            data-bs-parent="#accordionExample"
-          >
-            <div className="accordion-body">
+            <div className="wrapper my-3">
+              
               <div className="input-group mb-1">
                 <input
                   type="text"
                   className="form-control"
+                  style={{backgroundColor:props.mode}}
                   value={fWord}
                   onChange={handlefindChange}
                   aria-describedby="button-addon2"
@@ -121,13 +98,14 @@ function TextForm(props) {
                 <input
                   type="text"
                   className="form-control"
+                  style={{backgroundColor:props.mode}}
                   value={rWord}
                   onChange={handlereplaceChange}
                   aria-describedby="button-addon2"
                 />
                 <button
                   className={`btn btn-${props.mode} m-2`}
-                  style={{ color: props.label }}
+                  style={{ color: props.label ,backgroundColor:props.mode }}
                   onClick={handlereplaceClick}
                   type="button"
                 >
@@ -135,8 +113,6 @@ function TextForm(props) {
                 </button>
               </div>
             </div>
-          </div>
-        </div>
       </div>
     </>
   );

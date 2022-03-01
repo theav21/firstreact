@@ -6,7 +6,7 @@ import React from "react";
 import Alert from "./components/Alert";
 
 function App() {
-  const [mode, setMode] = useState("grey");
+  const [mode, setMode] = useState("#f8f9fa");
   const [label, setLabel] = useState("black");
   const [alert, setAlert] = useState(null);
   const [color, setColor] = useState("light");
@@ -43,7 +43,7 @@ function App() {
   // }
   const toggleLight = () => {
     setLabel("black");
-    setMode("grey");
+    setMode("#f8f9fa");
     setColor("light");
     document.body.style.backgroundColor = "white";
     showAlert("light mode has been enabled", "success");
@@ -51,7 +51,7 @@ function App() {
   };
   const toggleDark = () => {
     setLabel("white");
-    setMode("grey");
+    setMode("#212529");
     setColor("dark");
     document.body.style.backgroundColor = "black";
     showAlert("dark mode has been enabled", "success");
@@ -59,25 +59,32 @@ function App() {
   };
   const toggleRed = () => {
     setLabel("white");
-    setColor("dark");
-    setMode("red");
+    setColor("danger");
+    setMode("#DC3545");
     document.body.style.backgroundColor = "#ce5955";
     showAlert("red mode has been enabled", "success");
     
   };
   const toggleBlue = () => {
     setLabel("white");
-    setColor("dark");
-    setMode("blue");
+    setColor("primary");
+    setMode("#0D6EFD");
     document.body.style.backgroundColor = "#2311be";
     showAlert("blue mode has been enabled ", "success");
   };
   const togglePurple = () => {
-    setLabel("black");
-    setColor("dark");
+    setLabel("white");
+    setColor("light");
     setMode("#a142d8");
     document.body.style.backgroundColor = "#5b0c69";
     showAlert("purple mode has been enabled ", "success");
+  };
+  const toggleGreen = () => {
+    setLabel("white");
+    setColor("success");
+    setMode("#198754");
+    document.body.style.backgroundColor = "#3CE496";
+    showAlert("green mode has been enabled ", "success");
   };
 
   return (
@@ -90,13 +97,14 @@ function App() {
         toggleRed={toggleRed}
         toggleBlue={toggleBlue}
         togglePurple={togglePurple}
+        toggleGreen={toggleGreen}
         color={color}
         label={label}
 
 
       />
       <Alert alert={alert} />
-      <TextForm showAlert={showAlert} mode={mode} label={label} />
+      <TextForm showAlert={showAlert} mode={mode} color={color} label={label} />
     </>
   );
 }
