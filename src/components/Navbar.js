@@ -94,8 +94,10 @@ export default function (props) {
         </div>
         {/* <div className={`form-check form-switch text-${props.label}`}>
           <input className="form-check-input" onClick={props.toggle} type="checkbox" id="flexSwitchCheckDefault"/>
+<<<<<<< HEAD
           <label className="form-check-label" onClick={props.toggle} htmlFor="flexSwitchCheckDefault">enable dark mode</label>
         </div> */}
+
       </div>
     </nav>
   );
