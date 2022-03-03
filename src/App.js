@@ -90,7 +90,7 @@ function App() {
   return (
     <>
       <Navbar
-        title="My-App"
+        title="Text It"
         mode={mode}
         toggleLight={toggleLight}
         toggleDark={toggleDark}
