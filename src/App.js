@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React from "react";
 import Alert from "./components/Alert";
+import About from "./components/About";
 
 function App() {
   const [mode, setMode] = useState("#f8f9fa");
@@ -105,6 +106,9 @@ function App() {
       />
       <Alert alert={alert} />
       <TextForm showAlert={showAlert} mode={mode} color={color} label={label} />
+      {/* <About
+        label={label}
+      /> */}
     </>
   );
 }
