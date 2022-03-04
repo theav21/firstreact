@@ -7,7 +7,7 @@ export default function (props) {
       style={{ backgroundColor: props.mode }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" style={{ color: props.label }} href="/firstreact">
+        <a className="navbar-brand mx-3" style={{ color: props.label }} href="/firstreact">
           {props.title}
         </a>
         <button
@@ -21,7 +21,7 @@ export default function (props) {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <a
@@ -33,17 +33,9 @@ export default function (props) {
                 Home
               </a>
             </li>
-            <li className="nav-item">
-              <a
-                className="nav-link active"
-                style={{ color: props.label }}
-                href="firstreact/About"
-              >
-                About
-              </a>
-            </li>
+            
           </ul>
-        </div>
+        </div> */}
 
         {/* <div className="row">
           <div className={`form-check col-auto text-${props.label}`}>

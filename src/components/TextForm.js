@@ -92,7 +92,7 @@ function TextForm(props) {
                 <input
                   type="text"
                   className="form-control"
-                  style={{backgroundColor:props.mode}}
+                  style={{color:props.label,backgroundColor:props.mode}}
                   value={fWord}
                   onChange={handlefindChange}
                   aria-describedby="button-addon2"
@@ -100,7 +100,7 @@ function TextForm(props) {
                 <input
                   type="text"
                   className="form-control"
-                  style={{backgroundColor:props.mode}}
+                  style={{ color:props.label ,backgroundColor:props.mode}}
                   value={rWord}
                   onChange={handlereplaceChange}
                   aria-describedby="button-addon2"

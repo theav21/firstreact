@@ -4,8 +4,8 @@ import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
 import React from "react";
 import Alert from "./components/Alert";
-import About from "./components/About";
-import Route from "./components/Route"
+
+
 
 function App(props) {
   const [mode, setMode] = useState();
@@ -105,17 +105,14 @@ function App(props) {
 
 
       />
-      <Route path="/firstreact">
+      
         <Alert alert={alert} />
         <TextForm showAlert={showAlert} mode={mode} color={color} label={label} />
-      </Route>
+     
 
-      <Route path="/firstreact/About">
-        <Alert alert={alert} />
-        <About
-          label={label}
-        />
-      </Route>
+      
+       
+     
       
     </> 
       
