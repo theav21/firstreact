@@ -7,7 +7,7 @@ export default function (props) {
       style={{ backgroundColor: props.mode }}
     >
       <div className="container-fluid">
-        <a className="navbar-brand" style={{ color: props.label }} href="/">
+        <a className="navbar-brand" style={{ color: props.label }} href="/firstreact">
           {props.title}
         </a>
         <button
@@ -28,7 +28,7 @@ export default function (props) {
                 className="nav-link active"
                 style={{ color: props.label }}
                 aria-current="page"
-                href="/"
+                href="/firstreact"
               >
                 Home
               </a>
@@ -37,7 +37,7 @@ export default function (props) {
               <a
                 className="nav-link active"
                 style={{ color: props.label }}
-                href="/About"
+                href="firstreact/About"
               >
                 About
               </a>

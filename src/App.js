@@ -105,12 +105,12 @@ function App(props) {
 
 
       />
-      <Route path="/">
+      <Route path="/firstreact">
         <Alert alert={alert} />
         <TextForm showAlert={showAlert} mode={mode} color={color} label={label} />
       </Route>
 
-      <Route path="/About">
+      <Route path="/firstreact/About">
         <Alert alert={alert} />
         <About
           label={label}
