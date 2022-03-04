@@ -45,12 +45,12 @@ function TextForm(props) {
       <div className="container my-3" style={{ color: props.label }}>
         <h1>Words and Characters Count</h1>
         <p>
-          {text.split(" ").length} words and {text.length} Characters
+          {text.split(/\s+/).filter((element)=>{return element.length!=0}).length} words and {text.length} Characters
         </p>
         <p>
           <b>Time to read below para :-</b>
-          {0.008 * text.split(" ").length} minutes or{" "}
-          {0.48 * text.split(" ").length} seconds{" "}
+          {0.008 * text.split(" ").filter((element)=>{return element.length!=0}).length} minutes or{" "}
+          {0.48 * text.split(" ").filter((element)=>{return element.length!=0}).length} seconds{" "}
         </p>
       </div>
       <div className="container my-3" style={{ color: props.label }}>
@@ -66,6 +66,7 @@ function TextForm(props) {
           ></textarea>
         </div>
         <button
+          disabled={text.length===0}
           type="button"
           onClick={clickHandler}
           className={`btn btn-${props.color} m-2`}
@@ -73,13 +74,14 @@ function TextForm(props) {
           Convert to Uppercase
         </button>
         <button
+          disabled={text.length===0}
           type="button"
           onClick={clickHandler2}
           className={`btn btn-${props.color} m-2`}
         >
           Convert to lowercase
         </button>
-        <button type="button" onClick={click} className="btn btn-light m-2">
+        <button disabled={text.length===0} type="button" onClick={click} className="btn btn-light m-2">
           Clear
         </button>
         {/* <h2>Preview</h2>
