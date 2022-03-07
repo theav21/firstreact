@@ -10,7 +10,7 @@ export default function Navbar (props) {
         <a className="navbar-brand mx-3" style={{ color: props.label }} href="/firstreact">
           {props.title}
         </a>
-        <button
+        {/* <button
           className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
@@ -20,7 +20,7 @@ export default function Navbar (props) {
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> */}
         {/* <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
